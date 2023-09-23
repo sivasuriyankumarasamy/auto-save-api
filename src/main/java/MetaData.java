@@ -17,4 +17,12 @@ public class MetaData {
     public void setExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
     }
+
+    @Override
+    public String toString() {
+        return "MetaData{" +
+                "instrumentType='" + instrumentType + '\'' +
+                ", expiryDate='" + expiryDate + '\'' +
+                '}';
+    }
 }

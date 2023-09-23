@@ -1,11 +1,18 @@
 public class Stocks {
-    private MetaData metaData;
+    private MetaData metadata;
 
-    public MetaData getMetaData() {
-        return metaData;
+    public MetaData getMetadata() {
+        return metadata;
     }
 
-    public void setMetaData(MetaData metaData) {
-        this.metaData = metaData;
+    public void setMetadata(MetaData metadata) {
+        this.metadata = metadata;
+    }
+
+    @Override
+    public String toString() {
+        return "Stocks{" +
+                "metadata=" + metadata +
+                '}';
     }
 }
