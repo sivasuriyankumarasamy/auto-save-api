@@ -1,31 +1,25 @@
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.*;
-import org.springframework.web.client.RestTemplate;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 import reactor.util.retry.Retry;
 
-import javax.annotation.PostConstruct;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.rmi.ServerException;
-import java.sql.Array;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.*;
-import java.io.File;
+import java.util.List;
+import java.util.Optional;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.stream.Collectors;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-//@SpringBootApplication
 public class AutoSaveData {
 
     public static void main(String[] args) {
