@@ -45,7 +45,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>AutoScreenShot</mainClass>
+                    <mainClass>AutoSaveData</mainClass>
                     <layout>JAR</layout>
                 </configuration>
             </plugin>
